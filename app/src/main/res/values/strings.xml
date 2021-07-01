@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TransporteApp</string>
+    <string name="tituloLoginTextView">Inicio de Sesión</string>
+    <string name="texto_contrasena">Contraseña</string>
+    <string name="texto_usuario">Correo electrónico</string>
+    <string name="texto_btn_ingreso">Ingresar</string>
+    <string name="exitoso">Ahora estás logueado como administrador</string>
+</resources>

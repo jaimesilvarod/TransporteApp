@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "904762361195",
+    "project_id": "transporteapp-20c00",
+    "storage_bucket": "transporteapp-20c00.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:904762361195:android:9bb30503c546a004aeb82e",
+        "android_client_info": {
+          "package_name": "co.edu.unipiloto.transporteapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "904762361195-afafdj2o9ifv6q1h20ehio8lnjjpcful.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "co.edu.unipiloto.transporteapp",
+            "certificate_hash": "574a701c1074ef2332c3822b98b3fe7996e53f8c"
+          }
+        },
+        {
+          "client_id": "904762361195-3ilbdq9tl6estdvu7o6mnbgqj76j8d8r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8_YztRopJ-SLUwOgSawjWjDViG-RtvXs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "904762361195-3ilbdq9tl6estdvu7o6mnbgqj76j8d8r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
