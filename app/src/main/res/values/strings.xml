@@ -4,5 +4,11 @@
     <string name="texto_contrasena">Contraseña</string>
     <string name="texto_usuario">Correo electrónico</string>
     <string name="texto_btn_ingreso">Ingresar</string>
+    <string name="texto_btn_registro">Registrarse</string>
+    <string name="tituloRegistroTextView">Registrarse</string>
+    <string name="texto_btn_registro_usuario">Usuario</string>
+    <string name="texto_btn_registro_propietario">Propietario</string>
+    <string name="descripcion_ico_usuario">Ícono Usuario</string>
+    <string name="descripcion_ico_propietario">Ícono Propietario</string>
     <string name="exitoso">Ahora estás logueado como administrador</string>
 </resources>
