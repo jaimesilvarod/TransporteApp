@@ -64,4 +64,17 @@
         app:layout_constraintTop_toBottomOf="@+id/passwordEditText"
         android:onClick="validarUsuario"/>
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="@string/texto_btn_registro"
+        app:backgroundTint="@color/teal_200"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="registrarUsuario"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
