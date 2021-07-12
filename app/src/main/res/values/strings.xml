@@ -2,6 +2,7 @@
     <string name="app_name">TransporteApp</string>
     <string name="tituloLoginTextView">Inicio de Sesión</string>
     <string name="texto_contrasena">Contraseña</string>
+    <string name="texto_confirmar_contrasena">Confirmar contraseña</string>
     <string name="texto_usuario">Correo electrónico</string>
     <string name="texto_btn_ingreso">Ingresar</string>
     <string name="texto_btn_registro">Registrarse</string>
@@ -11,4 +12,9 @@
     <string name="descripcion_ico_usuario">Ícono Usuario</string>
     <string name="descripcion_ico_propietario">Ícono Propietario</string>
     <string name="exitoso">Ahora estás logueado como administrador</string>
+    <string name="tituloRegistroUsuarioTextView">Registro de Usuarios</string>
+    <string name="primerNombreUsuarios">Nombres</string>
+    <string name="apellidosUsuarios">Apellidos</string>
+    <string name="btn_registroUsuario">Registrarme</string>
+
 </resources>

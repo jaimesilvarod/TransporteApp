@@ -38,7 +38,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        android:onClick="registrarUsuarios"/>
 
     <ImageView
         android:id="@+id/imageView2"
@@ -60,5 +61,6 @@
         android:text="@string/texto_btn_registro_propietario"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        android:onClick="registrarPropietarios" />
 </androidx.constraintlayout.widget.ConstraintLayout>
