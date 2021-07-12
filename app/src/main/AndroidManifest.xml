@@ -8,8 +8,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.TransporteApp">
-        <activity android:name=".RegistroPropietario"></activity>
+        android:theme="@style/Theme.TransporteApp"
+        android:fullBackupContent="">
+        <activity android:name=".RegistroPropietario" />
         <activity android:name=".RegistroUsuario" />
         <activity android:name=".SeleccionTipoUsuario" />
         <activity android:name=".MenuPrincipalAdministrador" />
