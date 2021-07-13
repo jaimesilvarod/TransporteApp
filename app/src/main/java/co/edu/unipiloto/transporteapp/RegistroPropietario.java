@@ -8,10 +8,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.firebase.firestore.FirebaseFirestore;
+
 public class RegistroPropietario extends AppCompatActivity {
 
     EditText nombresRegistrados, apellidosRegistrados, correoRegistrado, contrasenaRegistrada, confirmaContrasena;
     Button mregistroUsuario;
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

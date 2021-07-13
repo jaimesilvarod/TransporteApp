@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         String usuario = meditTextUsuario.getText().toString();
         String contrasena = meditTextContrasena.getText().toString();
 
-        //Consulta de si existe el correo en la base de da
+        //Consulta de si existe el correo en la base de datos
         db.collection("usuarios")
                 .whereEqualTo("correo", usuario)
                 .get()
@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
+        //Si existe el correo en la base de datos y la contraseña coincide
         if(contrasenaNube.equals(contrasena)){
             Intent intent =  new Intent(this, MenuPrincipalAdministrador.class);
             startActivity(intent);
@@ -68,4 +69,3 @@ public class MainActivity extends AppCompatActivity {
     }
 
 }
-

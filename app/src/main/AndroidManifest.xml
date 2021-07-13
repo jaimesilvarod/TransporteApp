@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TransporteApp"
-        android:fullBackupContent="">
+        android:fullBackupContent="true">
         <activity android:name=".RegistroPropietario" />
         <activity android:name=".RegistroUsuario" />
         <activity android:name=".SeleccionTipoUsuario" />
