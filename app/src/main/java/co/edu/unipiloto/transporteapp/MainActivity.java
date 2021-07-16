@@ -15,7 +15,8 @@ import static android.content.ContentValues.TAG;
 
 public class MainActivity extends AppCompatActivity {
 
-    String contrasenaNube = "", idUsuarioNube;
+    String contrasenaNube = "";
+    Long idUsuarioNube;
     EditText meditTextUsuario, meditTextContrasena;
     Button mBtnValidarUsuario;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -57,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
                         for (QueryDocumentSnapshot document : Objects.requireNonNull(task.getResult())) {
                             Log.d(TAG, document.getId() + " => " + document.getData());
                             contrasenaNube = document.getString("contrasena");
-                            idUsuarioNube = document.getString("contrasena");
+                            idUsuarioNube = document.getLong("idTipoUsuario");
                         }
                     } else {
                         Log.d(TAG, "Error getting documents: ", task.getException());
@@ -66,11 +67,19 @@ public class MainActivity extends AppCompatActivity {
 
         //Si existe el correo en la base de datos y la contraseña coincide
         if(contrasenaNube.equals(contrasena)){
-            if(("2").equals(idUsuarioNube)){
+            if(idUsuarioNube==2){
                 Intent intent =  new Intent(this, MenuPrincipalAdministrador.class);
                 intent.putExtra("correoLogueado",usuario);
                 startActivity(intent);
-            }else if(("3").equals(idUsuarioNube)){
+            }else if(idUsuarioNube==3){
+                Intent intent =  new Intent(this, MenuPrincipalAdministrador.class);
+                intent.putExtra("correoLogueado",usuario);
+                startActivity(intent);
+            }else if (idUsuarioNube==4){
+                Intent intent =  new Intent(this, MenuPrincipalAdministrador.class);
+                intent.putExtra("correoLogueado",usuario);
+                startActivity(intent);
+            }else{
                 Intent intent =  new Intent(this, MenuPrincipalAdministrador.class);
                 intent.putExtra("correoLogueado",usuario);
                 startActivity(intent);
