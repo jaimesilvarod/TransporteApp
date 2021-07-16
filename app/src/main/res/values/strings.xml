@@ -1,4 +1,5 @@
 <resources>
+
     <string name="app_name">TransporteApp</string>
     <string name="tituloLoginTextView">Inicio de Sesión</string>
     <string name="texto_contrasena">Contraseña</string>

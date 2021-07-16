@@ -9,18 +9,14 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-import android.widget.Toast;
 
 import static android.content.ContentValues.TAG;
 
@@ -68,11 +64,8 @@ public class RegistroUsuario extends AppCompatActivity {
                     }
                 });
 
-        //Pausa para mostrar los mensajes
-        Toast.makeText(RegistroUsuario.this, "Se ha registrado con éxito", Toast.LENGTH_LONG).show();
-        onPause();
-        onResume();
         Intent intent = new Intent(RegistroUsuario.this, MainActivity.class);
+        intent.putExtra("origen", "usuarioComercianteCreado");
         startActivity(intent);
 
     }
