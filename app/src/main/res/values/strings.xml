@@ -14,8 +14,11 @@
     <string name="descripcion_ico_propietario">Ícono Propietario</string>
     <string name="exitoso">Ahora estás logueado como administrador</string>
     <string name="tituloRegistroUsuarioTextView">Registro de Usuarios</string>
+    <string name="tituloRegistroPropietarioTextView">Registro de Propietario</string>
     <string name="primerNombreUsuarios">Nombres</string>
     <string name="apellidosUsuarios">Apellidos</string>
     <string name="btn_registroUsuario">Registrarme</string>
-
+    <string name="titulo_toolbar">Bienvenido</string>
+    <string name="tituloUsuarioLogueado">Bienvenido</string>
+    <string name="btnCerrarSesion">Bienvenido</string>
 </resources>

@@ -35,10 +35,13 @@ public class MainActivity extends AppCompatActivity {
             switch(valorOrigen){
                 case "cerrarSesion":
                     Toast.makeText(this, "Su sesión fue cerrada con éxito", Toast.LENGTH_LONG).show();
+                    break;
                 case "usuarioPropietarioCreado":
                     Toast.makeText(this, "Su cuenta como Propietario fue creada, por favor inicie sesión", Toast.LENGTH_LONG).show();
+                    break;
                 case "usuarioComercianteCreado":
                     Toast.makeText(this, "Su cuenta como Comerciante fue creada, por favor inicie sesión", Toast.LENGTH_LONG).show();
+                    break;
             }
 
         }
@@ -68,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         //Si existe el correo en la base de datos y la contraseña coincide
         if(contrasenaNube.equals(contrasena)){
             if(idUsuarioNube==2){
-                Intent intent =  new Intent(this, MenuPrincipalAdministrador.class);
+                Intent intent =  new Intent(this, MenuPrincipalComerciante.class);
                 intent.putExtra("correoLogueado",usuario);
                 startActivity(intent);
             }else if(idUsuarioNube==3){
