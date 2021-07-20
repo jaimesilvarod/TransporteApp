@@ -1,7 +1,10 @@
 package co.edu.unipiloto.transporteapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -12,6 +15,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import java.util.Objects;
 import static android.content.ContentValues.TAG;
+import static co.edu.unipiloto.transporteapp.FeedReaderDbHelper.TABLA_USUARIO;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        FeedReaderDbHelper ayudante = new FeedReaderDbHelper(this);
+        SQLiteDatabase bd = ayudante.getWritableDatabase();
         setContentView(R.layout.activity_main);
 
         meditTextUsuario = findViewById(R.id.usernameEditText);
@@ -64,9 +70,11 @@ public class MainActivity extends AppCompatActivity {
                             idUsuarioNube = document.getLong("idTipoUsuario");
                         }
                     } else {
-                        Log.d(TAG, "Error getting documents: ", task.getException());
+                        Log.d(TAG, "Error obteniendo los documentos: ", task.getException());
                     }
                 });
+
+
 
         //Si existe el correo en la base de datos y la contraseña coincide
         if(contrasenaNube.equals(contrasena)){
@@ -75,8 +83,14 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("correoLogueado",usuario);
                 startActivity(intent);
             }else if(idUsuarioNube==3){
-                Intent intent =  new Intent(this, MenuPrincipalAdministrador.class);
-                intent.putExtra("correoLogueado",usuario);
+                Intent intent =  new Intent(this, MenuPrincipalPropietario.class);
+                //Insertamos el correo electrónico a la base de datos
+                FeedReaderDbHelper insertar = new FeedReaderDbHelper(this);
+                SQLiteDatabase BD2 = insertar.getWritableDatabase();
+                ContentValues valores = new ContentValues();
+                valores.put("id",1);
+                valores.put("correoUsuarioDB",usuario);
+                BD2.insert(TABLA_USUARIO, null, valores);
                 startActivity(intent);
             }else if (idUsuarioNube==4){
                 Intent intent =  new Intent(this, MenuPrincipalAdministrador.class);
