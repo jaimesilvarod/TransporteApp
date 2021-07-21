@@ -13,10 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TransporteApp">
-        <activity android:name=".RegistrarVehiculo">
-        </activity>
-        <activity
-            android:name=".VehiculosasuNombre"></activity>
+        <activity android:name=".AsignarConductorVehiculo"></activity>
+        <activity android:name=".RegistrarVehiculo"></activity>
+        <activity android:name=".VehiculosasuNombre" />
 
         <meta-data
             android:name="com.google.android.actions"

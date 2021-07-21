@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -16,11 +17,13 @@ public class MenuPrincipalPropietario extends AppCompatActivity {
     TextView view, botonVehiculos;
     Toolbar myToolbar;
     String correoUsuario;
+    Button mBtnIraRegistrarVehiculo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_principal_propietario);
+        mBtnIraRegistrarVehiculo = findViewById(R.id.btnIrRegistrarVehiculo);
         myToolbar = findViewById(R.id.toolbarComerciante);
         setSupportActionBar(myToolbar);
         view = findViewById(R.id.tituloLogueadoTextView);
@@ -60,6 +63,12 @@ public class MenuPrincipalPropietario extends AppCompatActivity {
 
     public void registrarVehiculos(View view) {
         Intent intent = new Intent(this, RegistrarVehiculo.class);
+        intent.putExtra("correoUsuario", correoUsuario);
+        startActivity(intent);
+    }
+
+    public void irAsignarConductorVehiculo(View view) {
+        Intent intent = new Intent(this, AsignarConductorVehiculo.class);
         intent.putExtra("correoUsuario", correoUsuario);
         startActivity(intent);
     }

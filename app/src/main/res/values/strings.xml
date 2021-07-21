@@ -22,8 +22,13 @@
     <string name="tituloUsuarioLogueado">Bienvenido</string>
     <string name="btnCerrarSesion">Bienvenido</string>
     <string name="cantidadVehiculos">Consultar vehículos registrados</string>
-    <string name="tituloUsuario"></string>
+    <string name="ayudaMarca">Marca del vehículo</string>
+    <string name="ayudaPlaca">Placa del vehículo</string>
+    <string name="t_btn_guardarVehiculo">Registrar vehículo</string>
     <string name="t_btn_irRegVeh">Registrar nuevo vehículo</string>
+    <string name="t_btn_irAsignarConductorVeh">Asignar conductor a vehículo</string>
+
+
 
 
 </resources>

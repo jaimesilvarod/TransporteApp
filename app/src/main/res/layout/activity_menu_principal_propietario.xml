@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".MenuPrincipalComerciante">
+    tools:context=".MenuPrincipalPropietario">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarComerciante"
@@ -61,6 +61,23 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnxVehiculo" />
+        app:layout_constraintTop_toBottomOf="@+id/btnxVehiculo"
+        android:onClick="registrarVehiculos"/>
+
+    <Button
+        android:id="@+id/btnIrAsignarConductor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/t_btn_irAsignarConductorVeh"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnIrRegistrarVehiculo"
+        android:onClick="irAsignarConductorVehiculo"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
