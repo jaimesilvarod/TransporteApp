@@ -21,4 +21,9 @@
     <string name="titulo_toolbar">Bienvenido</string>
     <string name="tituloUsuarioLogueado">Bienvenido</string>
     <string name="btnCerrarSesion">Bienvenido</string>
+    <string name="cantidadVehiculos">Consultar vehículos registrados</string>
+    <string name="tituloUsuario"></string>
+    <string name="t_btn_irRegVeh">Registrar nuevo vehículo</string>
+
+
 </resources>

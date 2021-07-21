@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         meditTextUsuario = findViewById(R.id.usernameEditText);
         meditTextContrasena = findViewById(R.id.passwordEditText);
         mBtnValidarUsuario = findViewById(R.id.btnValidarAutenticacion);
@@ -49,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void validarUsuario (View view){
+        meditTextUsuario = findViewById(R.id.usernameEditText);
+        meditTextContrasena = findViewById(R.id.passwordEditText);
         String usuario = meditTextUsuario.getText().toString();
         String contrasena = meditTextContrasena.getText().toString();
 
@@ -75,7 +76,8 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("correoLogueado",usuario);
                 startActivity(intent);
             }else if(idUsuarioNube==3){
-                Intent intent =  new Intent(this, MenuPrincipalAdministrador.class);
+                Intent intent =  new Intent(this, MenuPrincipalPropietario.class);
+                //Escribir correo usuario en t_usuarios
                 intent.putExtra("correoLogueado",usuario);
                 startActivity(intent);
             }else if (idUsuarioNube==4){
