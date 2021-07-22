@@ -31,4 +31,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tituloUsuarioTextView" />
 
+    <ListView
+        android:layout_width="409dp"
+        android:layout_height="651dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="79dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
