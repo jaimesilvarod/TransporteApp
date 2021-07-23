@@ -16,12 +16,13 @@ public class MenuPrincipalComerciante extends AppCompatActivity {
 
     TextView view;
     Toolbar myToolbar;
+    String correoUsuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_principal_comerciante);
-
+        correoUsuario = getIntent().getStringExtra("correoLogueado");
         myToolbar = (Toolbar) findViewById(R.id.toolbarComerciante);
         setSupportActionBar(myToolbar);
         String correoUsuario = getIntent().getStringExtra("correoLogueado");
@@ -30,6 +31,7 @@ public class MenuPrincipalComerciante extends AppCompatActivity {
         textoInicial = "Bienvenido: " + correoUsuario;
         view.setText(textoInicial);
 
+        //Mostrar opciones de comerciante
 
     }
 
@@ -53,4 +55,11 @@ public class MenuPrincipalComerciante extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
+
+    public void irCrearRecogida(View view){
+        Intent intent =  new Intent(this, CrearRecogida.class);
+        intent.putExtra("correoUsuario",correoUsuario);
+        startActivity(intent);
+    }
+
 }

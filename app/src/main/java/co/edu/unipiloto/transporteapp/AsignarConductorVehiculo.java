@@ -28,6 +28,8 @@ public class AsignarConductorVehiculo extends AppCompatActivity {
     String correoUsuarioReg = "";
     TextView view;
     Spinner conductoresPool, vehiculosPool;
+    ArrayAdapter<String> conductoresAdapter;
+    ArrayAdapter<String> vehiculosAdapter;
     ArrayList<String> conductores = new ArrayList<>();
     ArrayList<String> vehiculos = new ArrayList<>();
     FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -61,7 +63,19 @@ public class AsignarConductorVehiculo extends AppCompatActivity {
                     }
                 });
 
-        conductoresPool.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,conductores));
+        conductoresPool.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item,conductores));
+
+        conductoresPool.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
         //Vamos a buscar los conductores y asignarlos a la posición en el arreglo
         db.collection("vehiculos")
@@ -80,6 +94,19 @@ public class AsignarConductorVehiculo extends AppCompatActivity {
                         }
                     }
                 });
-        vehiculosPool.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,vehiculos));
+        vehiculosPool.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item,vehiculos));
+
+        vehiculosPool.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
     }
 }
